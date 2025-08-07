@@ -4,7 +4,7 @@ import sys
 import vlc
 import time
 
-inputs = ['\'1\'', '\'2\'', '\'3\'', '\'5\'', '\'6\'', '\'7\'', '\'8\'', '\'9\'', '\'A\'', '\'B\'', '\'C\'', '\'E\'', '\'F\'', '\'G\'', '\'H\'', '\'I\'']
+inputs = ['\'1\'', '\'2\'', '\'3\'', '\'5\'', '\'6\'', '\'7\'', '\'8\'', '\'9\'', '\'a\'', '\'b\'', '\'c\'', '\'e\'', '\'f\'', '\'g\'', '\'h\'', '\'i\'']
 special = ['\'*\'', '\'+\'', '\'-\'', '\'+\'', '\'/\'', '\'.\'']
 
 instance = vlc.Instance('--input-repeat=999999')
@@ -29,10 +29,10 @@ def getPresetTracks(preset):
 			 # Need to get rid of those pesky \n's
 			print(str(len(l)) + ': ', line[:-1])
 			l.append(line[:-1])
-	if len(l) < 10:
+	if len(l) < 18:
 		print("Too little links. Cannot correctly populate.")
 		l = []
-	elif len(l) > 10:
+	elif len(l) > 18:
 		print("Too many links. Cannot correctly populate.")
 		l = []
 	return l
